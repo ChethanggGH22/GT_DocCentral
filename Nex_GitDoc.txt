@@ -1,0 +1,58 @@
+gradlew eclipse: build work space 
+git branch 
+git-fetch-daily 
+
+thisidea
+
+dev.ipr file - thisidea will open ipr file its a copy of our project
+./gradlew generator - generating dependencies 
+
+servers
+1. dev.loc
+2. 
+
+FCT - feature certification test
+
+lfte connect ftelink
+
+build all - to check no compilation error
+
+
+git-fetch-daily (to fetch all the latest changes from remote branches)(Alpha, RCT, Weekly) -> Latest commit from alpha to our local branch
+/gradlew eclipse( to make the IDE ready)
+open the IDE -> refresh all the projects
+Build all the projects in IDE ( to ensure we don't have any syntax error with the latest code)
+./gradlew generators ( to generate the dependencies)
+
+to connect with local db -> lfte connect lfteID
+
+git commands to manage the changes -------------------------------
+
+what if any other task come in-between of some other work --- 
+-- git status (2 modified files)
+-- git checkout newBranch (git won't allow to switch the branch with local changes)
+-- to switch the branch we need to stash the changes - 
+
+to Stash the changes command - 
+git stash (to move the local code changes to a safe place kind of container)
+- then our branch is clean and ready to switch then will use 
+- git checkout branch-name (to changes the branch)
+- to get the stash changes after our urgent work .. 
+commands - 
+git stash list (to see how many stash is there)
+git stash apply stash@{0} (apply the latest changes in our local branch)
+git stash drop stash@{0} (to delete the stash from the stash list)
+
+Commands before build process
+- git status ( to see the modified files)
+- git add filenames with fully path example - git add src/main/java/Demo.java
+- git commit -m "commit message"
+Note:  ((- git pull (if two people are working on same feature and he committed new changes in feature branch - then bring the new changes to my local branch))
+Note:  ((- git rebase ( rebasing feature branch with alpha branch)  ))
+- git push(pushing the changes to the feature branch)
+
+after pushing the changes to the FTE(feature branches)
+need to build and deploy the code to the fte env to hand-over it to QA to test so that they can test it in fte env
+then if approval got to merge the feature/bug from QA then need to run FCT(feature certification Test (to ensure our changes meets our standard) then will navigate to the terminal in git bash- 
+
+promote (command we use to merge the feature branch which has code changes) then the changes will be merged in respected branches(alpha, RCT, Weekly)
